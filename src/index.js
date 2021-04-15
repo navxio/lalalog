@@ -50,4 +50,4 @@ log.custom = (title, styleString) => {
 	};
 };
 
-export default log;
+module.exports = log;
