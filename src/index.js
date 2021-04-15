@@ -17,9 +17,37 @@ const log = {};
 // light
 // dark
 
-const styleString = '%c ';
-log.static = (args) => {
-	console.log.apply();
+log.success = function () {
+	console.log(
+		`%cSUCCESS: %c${arguments[0]}`,
+		'color:white;background:green;',
+		'color:green;',
+		...Array.from(arguments).slice(0, arguments.length - 1)
+	);
+};
+
+log.error = function () {
+	console.log(
+		`%cERROR: %c${arguments[0]}`,
+		'color:white;background:red;',
+		'color:red;',
+		...Array.from(arguments).slice(0, arguments.length - 1)
+	);
+};
+
+log.error = function () {
+	console.log(
+		`%cERROR: %c${arguments[0]}`,
+		'color:white;background:blue;',
+		'color:blue;',
+		...Array.from(arguments).slice(0, arguments.length - 1)
+	);
+};
+
+log.custom = (title, styleString) => {
+	return function () {
+		console.log(`%c ${title}`, styleString, ...arguments);
+	};
 };
 
 export default log;
