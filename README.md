@@ -6,6 +6,7 @@ Beautiful and distinct log statements for the browser console.
 
 ### Usage
 Currenty only via Commonjs modules
+
 `const log = require('lalalog');`
 
 
