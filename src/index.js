@@ -19,7 +19,7 @@ const log = {};
 
 log.success = function () {
 	console.log(
-		`%cSUCCESS:%c ${arguments[0]}`,
+		`%cSUCCESS%c ${arguments[0]}`,
 		'color:white;background:green;',
 		'color:green;',
 		...Array.from(arguments).slice(0, arguments.length - 1)
@@ -28,18 +28,9 @@ log.success = function () {
 
 log.error = function () {
 	console.log(
-		`%cERROR:%c ${arguments[0]}`,
+		`%cERROR%c ${arguments[0]}`,
 		'color:white;background:red;',
 		'color:red;',
-		...Array.from(arguments).slice(0, arguments.length - 1)
-	);
-};
-
-log.error = function () {
-	console.log(
-		`%cERROR:%c ${arguments[0]}`,
-		'color:white;background:blue;',
-		'color:blue;',
 		...Array.from(arguments).slice(0, arguments.length - 1)
 	);
 };
