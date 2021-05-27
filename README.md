@@ -4,6 +4,9 @@ Beautiful and distinct log statements for the browser console.
 
 ![Console Preview](https://i.imgur.com/2K6l32r.png)
 
+### Installation
+`npm i lalalog`
+
 ### Usage
 Currenty only via Commonjs modules
 
